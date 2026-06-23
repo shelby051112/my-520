@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>520快乐 - 我们的专属空间</title>
+    <title>520快乐</title>
     <style>
         :root {
             --bg-color: #f0f9f0;
@@ -117,7 +117,7 @@
         let posY = container.offsetHeight; 
         let scrolling = true;
 
-        // 滚动动画
+        
         function step() {
             if (scrolling) {
                 posY -= 0.7; 
@@ -128,14 +128,14 @@
         }
         requestAnimationFrame(step);
 
-        // 按钮控制
+        
         document.getElementById('toggle-btn').onclick = function() {
             scrolling = !scrolling;
             this.textContent = scrolling ? "暂停滚动" : "继续滚动";
         };
         document.getElementById('reset-btn').onclick = () => { posY = container.offsetHeight; };
 
-        // 音乐控制 (解决浏览器自动播放限制)
+        
         playBtn.onclick = function() {
             if (music.paused) {
                 music.play();
@@ -146,7 +146,7 @@
             }
         };
 
-        // 音量
+       
         document.getElementById('vol').oninput = (e) => {
             music.volume = e.target.value / 100;
         };
